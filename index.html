@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm me down</title>
+    
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Corben&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Framework CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div id="section1" class="container-fluid">
+      <div class="row align-items-center section1-row">
+            <div class="col col-lg-12 col-md-12 section1-col">
+              <h1>Feeling anxious, scared<br/> and stressed?</h1>
+              <div class="spacer"></div>
+              <p>Click me to Continue</p>
+              <a href="#section2"><button class="btn btn-primary custom-btn" id="button1" onclick="getSpeech()">Talk to me</button></a>
+              <!-- <input class="btn btn-primary custom-btn" type="button" id="button1" onclick="getSpeech()" value="Talk to me"> -->
+            </div>
+      </div>  
+    </div>
+
+    <div id="section2" class="container-fluid">
+      <div class="row align-items-center section2-row">
+            <div class="col col-lg-12 col-md-12 section2-col">
+              <h1 class="heading-1">Lets start with how you are feeling today</h1>
+              <div class="spacer"></div>
+              <h3 class="section-2-heading-2">What is that one emotion that you feel strongly right now?</h3>
+            </div>
+            <div class="col section2-col">
+              <a href="#section3"><button type="button" id="anxious" class="custom-btn-2">Anxious</button></a>
+            </div>
+            <div class="col section2-col">
+              <a href="#section3"><button type="button" id="stressed" class="custom-btn-2">Stressed</button></a>
+            </div>
+            <div class="col section2-col">
+              <a href="#section3"><button type="button" id="angry" class="custom-btn-2">Angry/Upset</button></a>
+            </div>
+      </div>  
+    </div>
+
+    <div id="section3" class="container-fluid">
+      <div class="row align-items-center section3-row">
+            <div class="col col-lg-12 col-md-12 section2-col">
+              <h1>I understand that you are feeling <span id="showres"></span></h1>
+              <div class="spacer"></div>
+              <h3 class="section3-h3">How about we take a few deep breaths?</h3>
+              <p>(Follow the blob to match your breathing)</p>
+            </div>
+            <div class="spacer"></div>
+            <div class="col col-lg-12 col-md-12 section2-col">
+              <div class="blobs-container">
+                <div class="blob"></div>
+              </div>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+              <div class="spacer"></div>
+              <!-- <a href="#section4"><button class="btn btn-primary custom-btn" id="button3" onclick="getSpeech3()">Let's Move Along</button></a> -->
+            </div>
+            <!-- <script>
+              window.onload = function() {
+                setTimeout(function(){window.location.href = "https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR"}, 2000);
+              };
+            </script> -->
+      </div>  
+    </div>
+ 
+    <div id="section5" class="container-fluid">
+      <div class="row align-items-center section5-row">
+        <div class="col col-lg-12 col-md-12 section2-col">
+          <h1 class="section5-h1">Did that make you feel better?</h1>
+          <!-- <div class="spacer"></div> -->
+        </div>
+            <div class="col section5-col">
+              <a href="#section1"><button type="button" id="better" class="custom-btn-5-y">Yes, I feel Better!</button></a>
+            </div>
+            <div class="col section5-col">
+              <a href="#section4"><button class="custom-btn-5-n" id="button3" onclick="getSpeech2()">No, Not Really!</button></a>
+              <!-- <a href="#section4"><button type="button" id="worse" class="custom-btn-5-n">No, Not Really!</button></a> -->
+            </div>
+      </div>  
+    </div>
+
+    <div id="section4" class="container-fluid">
+      <div class="row align-items-center section4-row">
+        <div class="col col-lg-12 col-md-12 section2-col">
+          <h1 class="section4-h1">Here are some suggestions on activities you can do</h1>
+          <!-- <div class="spacer"></div> -->
+        </div>
+            <div class="col section4-col">
+              <a href="#section1"><button type="button" id="games" class="custom-btn-4">Play Relaxing Games</button></a>
+            </div>
+            <div class="col section4-col">
+              <a href="#section1"><button type="button" id="music" class="custom-btn-4">Listen to Calming Music</button></a>
+            </div>
+            <div class="col section4-col">
+              <a href="#section1"><button type="button" id="meditation" class="custom-btn-4">Meditate</button></a>
+            </div>
+      </div>  
+    </div>
+
+    <!-- Bootstrap Javascript CDN-->
+    <!-- <script src="animation.js"></script> -->
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
